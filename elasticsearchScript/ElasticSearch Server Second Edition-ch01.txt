@@ -2,7 +2,27 @@ GET /_cluster/health?pretty
 POST /_cluster/nodes/_shutdown
 PUT /blog/article/1
 {
-	"title": "New version of Elasticsearch released!",
+    "title": "New version of Elasticsearch released!",
 	"content": "Version 1.0 released today!", 
 	"tags": ["announce", "elasticsearch", "release"]
 }
+POST /blog/article/
+{
+	"title": "New version of Elasticsearch released!",
+	"content": "Version 1.0 released today!", 
+    "tags": ["announce", "elasticsearch", "release"]
+}
+GET /blog/article/1
+POST /blog/article/1/_update
+{
+    "script": "ctx._source.content = \"new content\""
+}
+POST /blog/article/1/_update
+{
+    "script": "ctx._source.counter += 1",
+    "upsert": {
+        "counter" : 0
+    }
+}
+DELETE /blog/article/1
+DELETE /blog/article/1?version=1
