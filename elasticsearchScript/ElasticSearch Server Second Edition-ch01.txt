@@ -1,4 +1,5 @@
 GET /_cluster/health?pretty
+POST /_cluster/nodes/_shutdown
 PUT /blog/article/1
 {
 	"title": "New version of Elasticsearch released!",
