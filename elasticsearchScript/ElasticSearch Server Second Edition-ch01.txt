@@ -26,3 +26,28 @@ POST /blog/article/1/_update
 }
 DELETE /blog/article/1
 DELETE /blog/article/1?version=1
+
+
+POST /books/es/1
+{
+    "title":"Elasticsearch Server",
+    "published": 2013
+}
+POST /books/es/2
+{
+  "title":"Mastering Elasticsearch",
+  "published": 2013
+}
+POST /books/solr/1
+{
+    "title":"Apache Solr 4 Cookbook",
+    "published": 2012
+}
+GET /books/_mapping?pretty
+GET /books/es/1
+
+GET /books/_search?pretty
+GET /books,clients/_search?pretty
+GET /books/es/_search?pretty
+GET /books/_search?pretty&q=title:elasticsearch
+GET /books/_analyze?field=title&text='Elasticsearch Server'
