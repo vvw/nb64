@@ -1,0 +1,7 @@
+GET /_cluster/health?pretty
+PUT /blog/article/1
+{
+	"title": "New version of Elasticsearch released!",
+	"content": "Version 1.0 released today!", 
+	"tags": ["announce", "elasticsearch", "release"]
+}
