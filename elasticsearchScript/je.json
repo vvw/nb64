@@ -1,0 +1,13 @@
+{
+    "version": {
+        "number": "1.4.2",
+        "build_hash": "927caff6f05403e936c20bf4529f144f0c89fd8c",
+        "build_timestamp": "2014-12-16T14:11:12Z",
+        "lucene_version": "4.10.2",
+        "build_snapshot": false
+    },
+    "status": 200,
+    "tagline": "You Know, for Search",
+    "name": "Link",
+    "cluster_name": "elasticsearch"
+}
